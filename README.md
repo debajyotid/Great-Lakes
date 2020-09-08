@@ -8,6 +8,8 @@
 ### Index
 |__Problem__|__Methods__|__Libs__|__Repo__|
 |-|-|-|-|
+|[Recommending Electronic Items using Collaborative Filtering](#Recommending-Electronic-Items-using-User-based-and-Item-based-Collaborative-Filtering)|`Recommendation Systems` |`surprise`, `SVD`, `collections`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/CollaborativeFiltering_and_PopularityBased_RecommendationSystems.ipynb)|
+|[Book Recommendation using Collaborative Filtering](#Book-Recommendation-using-User-based-Collaborative-Filtering)|`Recommendation Systems` |`surprise`, `SVD`, `collections`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Recommendations_using_CollaborativeFiltering.ipynb)|
 |[Predicting Loan Defualt using Randomforest Classifier](#Predicting-Loan-Defualt-using-Randomforest-Classifier)|`Ensemble Techniques` |`KFold`, `sklearn.utils`, `RandomForestClassifier`, `sklearn.preprocessing`, `sklearn.preprocessing`, `sklearn.model_selection`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Predicting_LoanDefault_using_RandomForestClassifier.ipynb)|
 |[Predicting onset of Parkinson's disease by analyzing voice sample using Ensemble Techniques](#Predicting-onset-of-Parkinson's-disease-by-analyzing-voice-sample-using-Ensemble-Techniques)|`Ensemble Techniques` |`DecisionTreeClassifier`, `RandomForestClassifier`, `PCA`, `sklearn.preprocessing`, `GridSearchCV`, `RandomizedSearchCV`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Predicting_Parkinsons_onset_analyzing_voicesamples_using_EnsembleTechniques.ipynb)|
 |[Classifying vehicles by analysing silhouettes](#Classifying-vehicles-by-analysing-their-silhouettes)|`Unsupervised Learning` |`StandardScaler`, `SVM`, `PCA`, `GridSearchCV`, `Cross-Val`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Vehicle_Classification_analyzing_silhouettes.ipynb)|
@@ -17,6 +19,41 @@
 |[Building a Student Performance Prediction System](#Building-a-system-to-predict-Student's-performance-using-Regression-techniques)|`Supervised Learning` |`LogisticRegression`, `GaussianNB`, `train_test_split`, `seaborn`, `labelencoder`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Building_Student_Performace_Prediction_System.ipynb)|
 |[Analyzing Cost of Insurance using Statistical Techniques](#Analyzing-Insurance-Cost-using-Statistical-Techniques)|`Hypothesis Testing` |`t-tests`, `Students t-Test`, `EDA`, `Anova`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Analyzing_Insurance_costs_using_Statistical_techniques.ipynb)|
 |[Hypothesis Testing Questions](#Hypothesis-Testing-Questions)|`Hypothesis Testing` |`t-tests`, `ANOVA`, `Type-I & Type-II Errors`, `Chi-Squared Tests`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Hypothesis_Testing_Questions.ipynb)|
+
+### Recommending Electronic Items using User based and Item based Collaborative Filtering
+---
+Everyday a million products are being recommended to users based on popularity and other metrics on e-commerce websites. The most popular e-commerce website boosts average order value by 50%, increases revenues by 300%, and improves conversion. In addition to being a powerful tool for increasing revenues, product recommendations are so essential that customers now expect to see similar features on all other eCommerce sites.
+
+First three columns are userId, productId, and ratings and the fourth column is timestamp. 
+Source - Amazon Reviews data (http://jmcauley.ucsd.edu/data/amazon/).
+The repository has several datasets. For this case study, we are using the Electronics dataset.
+
+We first devised a POPULARITY BASED recommendation system wherein we were able to predict the top-5 most popular products to any new users. This doesn't require us to have any apriori knowledge of the users.
+
+While we proceeded with the entire dataset while we were designing our POPULARITY BASED MODEL, it didn't make sense to take the entire dataset for our COLLABORATIVE FILTERING MODEL, especially when we saw that a huge number of users had rated only 1 item. This would have caused undue sparsity in our collaboration matrix & we thus filtered down our data to only those users who have rated at least 10 items
+
+If we filtered our data further, by choosing only such users who have rated say 15 or more items, we could've achieved a better RMSE as our user-item collaboration matrix would be more dense & our model would be thus more accurate
+
+However, going with only those users who rated at least 10 items, we were able to achieve a RMSE of 1.49 with a plain-vanilla SVD model, and once we tuned the same we were able to bring the RMSE to below 1
+Using this model, we were then able to design a recommendation system which would be able to predict the top-5 products for a given user
+
+Repo Link: [Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/CollaborativeFiltering_and_PopularityBased_RecommendationSystems.ipynb)
+
+#### Skills and Tools
+User-User Collaborative Filtering, Item-Item Collaborative Filtering, SVD, KNNWithMeans
+
+### Book Recommendation using User based Collaborative Filtering
+---
+The Objective of this project entails building a Book Recommender System for users based on user-based and item-based collaborative filtering approaches.
+
+The dataset has been compiled by Cai-Nicolas Ziegler in 2004, and it comprises of three tables for users, books and ratings. Explicit ratings are expressed on a scale from 1-10 (higher values denoting higher appreciation) and implicit rating is expressed by 0.
+Reference: http://www2.informatik.uni-freiburg.de/~cziegler/BX/
+
+
+Repo Link: [Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Recommendations_using_CollaborativeFiltering.ipynb)
+
+#### Skills and Tools
+User-User Collaborative Filtering, SVD
 
 ### Predicting Loan Defualt using Randomforest Classifier
 ---
@@ -30,12 +67,19 @@ K-Fold Cross-Validation, RandomForestClassifier, GridSearchCV, LabelEncoder, One
 ### Predicting onset of Parkinson's disease by analyzing voice sample using Ensemble Techniques
 ---
 Parkinson’s Disease (PD) is a degenerative neurological disorder marked by decreased dopamine levels in the brain. It manifests itself through a deterioration of movement, including the presence of tremors and stiffness. There is commonly a marked effect on speech, including dysarthria (difficulty articulating sounds), hypophonia (lowered volume), and monotone (reduced pitch range). Additionally, cognitive impairments and changes in mood can occur, and risk of dementia is increased.
+
 Traditional diagnosis of Parkinson’s Disease involves a clinician taking a neurological history of the patient and observing motor skills in various situations. Since there is no definitive laboratory test to diagnose PD, diagnosis is often difficult, particularly in the early stages when motor effects are not yet severe.
+
 Monitoring progression of the disease over time requires repeated clinic visits by the patient. An effective screening process, particularly one that doesn’t require a clinic visit, would be beneficial. Since PD patients exhibit characteristic vocal features, voice recordings are a useful and non-invasive tool for diagnosis. If machine learning algorithms could be applied to a voice recording dataset to accurately diagnosis PD, this would be an effective screening step prior to an appointment with a clinician.
-The data & attributes information for this project is available at https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/ The data consists of those diagnosed with Parkinson Disease and those who do not.
+
+The data & attributes information for this project is available at https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/ 
+The data consists of those diagnosed with Parkinson Disease and those who do not.
+
 Data Set Information:
 This dataset is composed of a range of biomedical voice measurements from 31 people, 23 with Parkinson's disease (PD). Each column in the table is a particular voice measure, and each row corresponds one of 195 voice recording from these individuals ("name" column). The main aim of the data is to discriminate healthy people from those with PD, according to "status" column which is set to 0 for healthy and 1 for PD.
+
 The data is in ASCII CSV format. The rows of the CSV file contain an instance corresponding to one voice recording. There are around six recordings per patient, the name of the patient is identified in the first column.
+
 This dataset is courtesy the below & maybe copyrighted by the same.
 Max A. Little, Patrick E. McSharry, Eric J. Hunter, Lorraine O. Ramig (2008), 'Suitability of dysphonia measurements for telemonitoring of Parkinson's disease', IEEE Transactions on Biomedical Engineering (to appear).
 
