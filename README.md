@@ -8,6 +8,9 @@
 ### Index
 |__Problem__|__Methods__|__Libs__|__Repo__|
 |-|-|-|-|
+|[FashionMNIST and CIFAR10 Classification using CNN](#Using-Convolutional-Neural-Networks-for-classifying-FashionMNIST-and-CIFAR10-dataset)|`Neural Networks` | `tensorflow.keras`, `tensorflow.keras.preprocessing.image`,`sklearn.model_selection`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/CNN_on_FashionMNIST_CIFAR10_with_ImageAugmentation.ipynb)|
+|[Handwritten Digit Classification](#Using-Dense-Neural-Networks-for-Street-View-House-Numbers-Identification)|`Neural Networks` | `tensorflow.keras`, `sklearn.preprocessing`,`sklearn.model_selection`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Predicting_hadnwritten_digits_using_DNN.ipynb)|
+|[Predicting Customer Churn using Neural Networks](#Predicting-Customer-Churn-using-Neural-Networks)|`Neural Networks` |`imblearn`, `tensorflow.keras`, `sklearn.preprocessing`,`sklearn.model_selection`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/CollaborativeFiltering_and_PopularityBased_RecommendationSystems.ipynb)|
 |[Recommending Electronic Items using Collaborative Filtering](#Recommending-Electronic-Items-using-User-based-and-Item-based-Collaborative-Filtering)|`Recommendation Systems` |`surprise`, `SVD`, `collections`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/CollaborativeFiltering_and_PopularityBased_RecommendationSystems.ipynb)|
 |[Book Recommendation using Collaborative Filtering](#Book-Recommendation-using-User-based-Collaborative-Filtering)|`Recommendation Systems` |`surprise`, `SVD`, `collections`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Recommendations_using_CollaborativeFiltering.ipynb)|
 |[Predicting Loan Defualt using Randomforest Classifier](#Predicting-Loan-Defualt-using-Randomforest-Classifier)|`Ensemble Techniques` |`KFold`, `sklearn.utils`, `RandomForestClassifier`, `sklearn.preprocessing`, `sklearn.preprocessing`, `sklearn.model_selection`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Predicting_LoanDefault_using_RandomForestClassifier.ipynb)|
@@ -19,6 +22,73 @@
 |[Building a Student Performance Prediction System](#Building-a-system-to-predict-Student's-performance-using-Regression-techniques)|`Supervised Learning` |`LogisticRegression`, `GaussianNB`, `train_test_split`, `seaborn`, `labelencoder`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Building_Student_Performace_Prediction_System.ipynb)|
 |[Analyzing Cost of Insurance using Statistical Techniques](#Analyzing-Insurance-Cost-using-Statistical-Techniques)|`Hypothesis Testing` |`t-tests`, `Students t-Test`, `EDA`, `Anova`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Analyzing_Insurance_costs_using_Statistical_techniques.ipynb)|
 |[Hypothesis Testing Questions](#Hypothesis-Testing-Questions)|`Hypothesis Testing` |`t-tests`, `ANOVA`, `Type-I & Type-II Errors`, `Chi-Squared Tests`|[Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Hypothesis_Testing_Questions.ipynb)|
+
+### Using Convolutional Neural Networks for classifying FashionMNIST and CIFAR-10 dataset
+---
+
+Correctly classify the different items in the FashionMNIST & CIFAR10 dataset using Convolutional Neural Networks. Additionally use Image augmentation by utilizing the ImageDataGenerator library.
+
+Repo Link: [Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/CNN_on_FashionMNIST_CIFAR10_with_ImageAugmentation.ipynb)
+
+#### Skills and Tools
+Convolution, Maxpooling, Tensorflow, Keras, Dropout, BatchNormalization, Softmax, Adam, Image Augmentation
+
+### Using Dense Neural Networks for classifying FashionMNIST dataset
+---
+
+Correctly classify the different items in the FashionMNIST dataset using Dense Neural Networks
+
+Repo Link: [Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/FashionMNIST_Classification.ipynb)
+
+#### Skills and Tools
+Tensorflow, Keras, Dropout, BatchNormalization, Softmax, Adam
+
+### Using Dense Neural Networks for Street View House Numbers Identification
+---
+
+In this project, we will use the dataset with images centered around a single digit (many of the images do contain some distractors at the sides). Although we are taking a sample of the data which is simpler, it is more complex than MNIST because of the distractors.
+
+The Street View House Numbers (SVHN) Dataset SVHN is a real-world image dataset for developing machine learning and object recognition algorithms with the minimal requirement on data formatting but comes from a significantly harder, unsolved, real-world problem (recognizing digits and numbers in natural scene images). SVHN is obtained from house numbers in Google Street View images. 
+Link to the dataset: https://drive.google.com/file/d/1L2-WXzguhUsCArrFUc8EEkXcj33pahoS/view?usp=sharing
+Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Bo Wu, Andrew Y. Ng Reading Digits in Natural Images with Unsupervised Feature Learning NIPS Workshop on Deep Learning and Unsupervised Feature Learning 2011.
+
+The objective of the project is to learn how to implement a simple image classification pipeline based on a deep neural network. 
+
+Repo Link: [Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Predicting_hadnwritten_digits_using_DNN.ipynb)
+
+#### Skills and Tools
+Tensorflow, Keras, Dropout, BatchNormalization, Softmax, Adam
+
+### Predicting Customer Churn using Neural Networks
+---
+The case study is from an open source dataset from Kaggle.
+
+Link to the Kaggle project site:
+https://www.kaggle.com/barelydedicated/bank-customer-churn-modeling
+
+Objective of this exercise was to determine that given a Bank customer, can we build a classifier which can determine whether they will leave or not using Neural networks?
+
+We first build a simple Dense Neural Network (DNN) with 1 i/p layer (100 Neurons), 1 hidden layer (50 Neurons) and 1 o/p layer. With the same we obtained a testing accuracy of 80%, and the model generalized well over both training & testing.
+
+We then proceeded towards optimizing the model by changing the number of epochs & batch_size per epoch. The latter will have direct impact on whether or not the model will get stuck in a local minima or will be able to proceed to a gloabl minima, thereby both achieving a good accuracy & generalization
+We started in this direction with the default batch_size of 32 & 1000 epochs. This resulted in an extremely over-fit model, which achieved a training accuracy of 100%, but failed miserably in testing by only achieving 81%. Moreover, it took a horrendous amount of time to finish training. So we changed the batch_size to 70 and reduced the epochs to 100, thereby achieving a training accuracy of 90%, but testing accuracy of only 85%.
+
+We took our chances by increasing the batch_size further to 100 and reducing epochs to 70. We still hadn't reached a well-generalized model as our model was still doing 88-86, across training-testing respectively. However, our testing accuracy had now risen from 81-85-86.
+
+So we decided to tinker further & check if a more generalized model could be designed, and proceeded with batch_size=700 & epochs=10. This caused our model to drop it's testing accuracy to 84%, but it was a closer approximation of our training accuracy of 85%. Thus we could say that we had achieved a more-or-less generalized model. As a batch_size of 700 represents 10% of a training dataset of 7000 datapoints, and with 10 epochs the model was also getting trained much faster, we decided to continue with this epoch & batch_size.
+
+We lastly added an extra hidden layer of 50 neurons with activation function as RELU & saw that the model did slightly better at 86-85% acorss training-testing respectively. This was our final model.
+
+In our initial model we had used the default RMSPROP optimizer & the tuned model we used RMSPROP with Nestrov Momentum, i.e. NADAM optimizer.
+
+We didn't practise in imbalance learning optimization as we felt that in real-world too the class distribution might be similar. However, we ensured that the class distribution remained identical across both training & testing datasets.
+
+We observed that the model was having a very poor RECALL score for customers who HAVE EXITED, which was actually our target customers, people who we wish to retain back. Thus the above model was defeating our basic requirement & decided to look at other options to improve our model. One such approach was SYNTHETIC OVER-SAMPLING & RANDOM UNDER-SAMPLING. Using the same we were able to design a model which is having comparable accuracy to our previous model while at the same time has a much higher PRECISION & RECALL for our target class.
+
+Repo Link: [Click](https://nbviewer.jupyter.org/github/debajyotid/AI-ML-Projects/blob/master/Predicting_customer_churn_using_ANN.ipynb)
+
+#### Skills and Tools
+SMOTE, RandomUnderSampler, Pipeline, Tensorflow, Keras
 
 ### Recommending Electronic Items using User based and Item based Collaborative Filtering
 ---
