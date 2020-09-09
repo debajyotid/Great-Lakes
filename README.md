@@ -2,7 +2,7 @@
 ![Image](https://www.greatlakes.edu.in/e-learning-programs/images/great-learning.jpg)
 ### Introduction
 ---
- This is a collection of the different Machine Learning & Deep Learning Projects undertaken by me. Some of these projects are part of the PGP AI-ML course from Great Lakes Institute of Management, to which I am currently enrolled to
+ This is a collection of the different Machine Learning & Deep Learning Projects undertaken by me, as part of the PGP AI-ML course from Great Lakes Institute of Management, to which I am currently enrolled to
 
 
 ### Index
