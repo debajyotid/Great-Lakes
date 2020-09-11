@@ -8,6 +8,7 @@
 ### Index
 |__Problem__|__Methods__|__Libs__|__Repo__|
 |-|-|-|-|
+|[Analysing the impact of lockdown in curtailing the spread of COVID19 in Germany](#Determining-the-preparedness-of-the-German-Government-and-Medical-Authorities-in-handling-COVID19-Crisis)|`Statistical Methods` | `matplotlib.pyplot`, `scipy.stats`,  `sklearn.preprocessing`|[Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Mini%20Capstone/Covid-19%20Germany%20(Data%20Pre%20Processing%20%26%20Hypothesis%20Testing)_Final%20version.ipynb)|
 |[Using CNN to classify German Traffic Signs](#Using-CNN-to-classify-German-Traffic-Signs)|`Convolutional Neural Networks` | `tensorflow.keras`, `tensorflow.keras.preprocessing.image`,`sklearn.model_selection`|[Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Deep%20Learning/German%20Traffic%20Signs/Using%20CNN%20to%20classify%20German%20Traffic%20Signs.ipynb)|
 |[FashionMNIST and CIFAR10 Classification using CNN](#Using-Convolutional-Neural-Networks-for-classifying-FashionMNIST-and-CIFAR10-dataset)|`Convolutional Neural Networks` | `tensorflow.keras`, `tensorflow.keras.preprocessing.image`,`sklearn.model_selection`|[Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Deep%20Learning/CNN_on_FashionMNIST_CIFAR10_with_ImageAugmentation.ipynb)|
 |[Using DNN to classify images in Fashion-MNIST Dataset](#Using-Dense-Neural-Networks-for-classifying-FashionMNIST-dataset)|`Neural Networks` | `tensorflow.keras`, `tensorflow.keras.preprocessing.image`,`sklearn.model_selection`|[Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Deep%20Learning/FashionMNIST_Classification.ipynb)|
@@ -24,6 +25,27 @@
 |[Building a Student Performance Prediction System](#Building-a-Student-performance-prediction-system-using-Regression-techniques)|`Supervised Learning` |`LogisticRegression`, `GaussianNB`, `train_test_split`, `seaborn`, `labelencoder`|[Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Machine%20Learning/Supervised-Learning/Building%20a%20Student%20Performace%20Prediction%20System/Building_Student_Performace_Prediction_System.ipynb)|
 |[Analyzing Cost of Insurance using Statistical Techniques](#Analyzing-Insurance-Cost-using-Statistical-Techniques)|`Hypothesis Testing` |`t-tests`, `Students t-Test`, `EDA`, `Anova`|[Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Machine%20Learning/Statistical-Learning/Analyzing_Insurance_costs_using_Statistical_techniques.ipynb)|
 |[Hypothesis Testing Questions](#Hypothesis-Testing-Questions)|`Hypothesis Testing` |`t-tests`, `ANOVA`, `Type-I & Type-II Errors`, `Chi-Squared Tests`|[Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Machine%20Learning/Statistical-Learning/Hypothesis_Testing_Questions.ipynb)|
+
+### Determining the preparedness of the German Government and Medical Authorities in handling COVID19 Crisis
+---
+![Image](https://taj-strategie.fr/content/uploads/2020/03/germany-coronavirus.png)
+
+Purpose: 
+In this paper, we try and analyse the trends in the spread of COVID-19 in the German population. We look into the statistical significance of the lockdown enforced by the German authorities in curbing the spread of the virus across the German population. We also try to develop a forecasting model to predict the number of infected patients & fatalities arising out of the infection. 
+
+Materials & Methods: 
+As part of this study, we obtained the dataset from 2 sources, namely Kaggle & Institute of Health Metrics & Evaluation (IHME). The datasets had data like number of cases, age-group of patient, number of available beds, number of tests done on a given day across the 2 datasets & the datasets were merged based different criterion like State, County, Date of Infection,etc. The dataset had data from 24-Jan-2020 up till 3-June-2020, and the same was obtained from across the 16 German states & their individual counties. 
+
+Results: 
+Statistical methods like t-Test & ANOVA resulted in extremely low p-values, based on which we can say with 99% confidence level that the different measures undertaken by German authorities, especially the imposition of a nationwide lockdown, had a statistically significant impact on controlling the spread of the SARS-CoV-2 virus in Germany. Visually we saw that the SARS-CoV-2 virus spread rose significantly in the pre-lockdown period (which we have assumed to be till 07-April-2020) and then started slowly tapering off. This also helped avoid severe stress on the medical institutions & we once again saw visually that the hospital admission rate was always below the rate at which new hospital beds were being added daily. This was also vindicated in our time-series forecasting model using Prophet, an open-source forecasting library from Facebook. 
+
+Conclusion: 
+Based on the above, we could statistically prove that the timely measures and steps taken by German authorities, like imposition of the lockdown, helped in both controlling the spread of COVID-19 across Germany, as well as kept the rate of fatalities due to the same at a relatively low rate.
+
+Repo Link: [Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Mini%20Capstone/Covid-19%20Germany%20(Data%20Pre%20Processing%20%26%20Hypothesis%20Testing)_Final%20version.ipynb)
+
+#### Skills and Tools
+Statistics, EDA, Visualization
 
 ### Using CNN to classify German Traffic Signs
 ---
