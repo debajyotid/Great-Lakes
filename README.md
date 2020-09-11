@@ -8,7 +8,7 @@
 ### Index
 |__Problem__|__Methods__|__Libs__|__Repo__|
 |-|-|-|-|
-|[Using CNN to classify German Traffic Signs](#Using CNN to classify German Traffic Signs)|`Convolutional Neural Networks` | `tensorflow.keras`, `tensorflow.keras.preprocessing.image`,`sklearn.model_selection`|[Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Deep%20Learning/German%20Traffic%20Signs/Using%20CNN%20to%20classify%20German%20Traffic%20Signs.ipynb)|
+|[Using CNN to classify German Traffic Signs](#Using-CNN-to-classify-German-Traffic-Signs)|`Convolutional Neural Networks` | `tensorflow.keras`, `tensorflow.keras.preprocessing.image`,`sklearn.model_selection`|[Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Deep%20Learning/German%20Traffic%20Signs/Using%20CNN%20to%20classify%20German%20Traffic%20Signs.ipynb)|
 |[FashionMNIST and CIFAR10 Classification using CNN](#Using-Convolutional-Neural-Networks-for-classifying-FashionMNIST-and-CIFAR10-dataset)|`Convolutional Neural Networks` | `tensorflow.keras`, `tensorflow.keras.preprocessing.image`,`sklearn.model_selection`|[Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Deep%20Learning/CNN_on_FashionMNIST_CIFAR10_with_ImageAugmentation.ipynb)|
 |[Using DNN to classify images in Fashion-MNIST Dataset](#Using-Dense-Neural-Networks-for-classifying-FashionMNIST-dataset)|`Neural Networks` | `tensorflow.keras`, `tensorflow.keras.preprocessing.image`,`sklearn.model_selection`|[Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Deep%20Learning/FashionMNIST_Classification.ipynb)|
 |[Handwritten Digit Classification](#Using-Dense-Neural-Networks-for-Street-View-House-Numbers-Identification)|`Neural Networks` | `tensorflow.keras`, `sklearn.preprocessing`,`sklearn.model_selection`|[Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Deep%20Learning/Handwritten%20Digit%20Classification/Predicting_hadnwritten_digits_using_DNN.ipynb)|
@@ -25,7 +25,7 @@
 |[Analyzing Cost of Insurance using Statistical Techniques](#Analyzing-Insurance-Cost-using-Statistical-Techniques)|`Hypothesis Testing` |`t-tests`, `Students t-Test`, `EDA`, `Anova`|[Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Machine%20Learning/Statistical-Learning/Analyzing_Insurance_costs_using_Statistical_techniques.ipynb)|
 |[Hypothesis Testing Questions](#Hypothesis-Testing-Questions)|`Hypothesis Testing` |`t-tests`, `ANOVA`, `Type-I & Type-II Errors`, `Chi-Squared Tests`|[Click](https://nbviewer.jupyter.org/github/debajyotid/Great-Lakes/blob/master/Machine%20Learning/Statistical-Learning/Hypothesis_Testing_Questions.ipynb)|
 
-### Using-CNN-to-classify-German-Traffic-Signs
+### Using CNN to classify German Traffic Signs
 ---
 ![Image](https://pbs.twimg.com/media/DPdfoulVAAAoq86?format=jpg&name=medium)
 
